@@ -6,12 +6,14 @@ menu ()
 {
 
 function listarDiretorio(){
+	echo "Digite o nome do diretório: "
         read nome
         ls $nome
         sleep 5
 } 
 
 function listarConteudoDir(){
+	echo "Digite o nome do diretório: "
         read nome
         ls -la $nome
         sleep 5
@@ -63,55 +65,47 @@ function delArquivo(){
 }
 
 function delDiretorio(){
-	echo “Caminho do diretório: “
+	echo "Caminho do diretório: "
 	read nome
 	rm -r $nome
 	sleep 5
 }
 
 function visualizarArquivo(){
-        echo “Caminho do arquivo: “
+	echo "Caminho do arquivo: "
         read nome
         cat $nome
         sleep 5
 }
 
 function visualizarArquivoPausa(){
-        echo “Caminho do arquivo: “
+        echo "Caminho do arquivo: "
         read nome
         cat $nome | more
         sleep 5
 }
 
-function exibirArquivo(){
-        echo “Caminho do arquivo: “
+
+function exibirNumLinhas(){
+        echo "Caminho do arquivo: "
         read nome
         wc -l $nome 
         sleep 5
 }
 
-function exibirNumLinhas(){
-        echo “Caminho do arquivo: “
-        read nome
-        echo “Quantidade de linhas: “
-        read linhas
-        head -n $linhas $nome
-        sleep 5
-}
-
 function procurarPalavra(){
-        echo “Caminho do arquivo: “
+	echo "Caminho do arquivo: "
         read nome
-        echo “Palavra para filtro: “
+	echo "Palavra para filtro: "
         read palavra
         cat $nome | grep -n $palavra
         sleep 5
 }
 
 function exibiPrimeirasLinhas(){
-        echo “Caminho do arquivo: “
+	echo "Caminho do arquivo: "
         read nome
-        echo “Quantidade de linhas: “
+	echo "Quantidade de linhas: "
         read linhas
         head -n $linhas $nome
         sleep 5
@@ -119,9 +113,9 @@ function exibiPrimeirasLinhas(){
 
 function exibirUltimasLinhas()
 {
-	echo “Caminho do arquivo: “
+	echo "Caminho do arquivo: "
 	read nome
-	echo “Quantidade de linhas
+	echo "Quantidade de linhas: "
 	read linhas
 	tail -n $linhas $nome
 	sleep 5
@@ -147,7 +141,7 @@ function exibirUsuariosSistema()
 
 function trocarSenha()
 {
-	echo “Digite o usuário que terá a senha alterada: “
+	echo "Digite o usuário que terá a senha alterada: "
 	read nome
 	passwd $nome
 	sleep 5
@@ -155,7 +149,7 @@ function trocarSenha()
 
 function addUsuario()
 {
-	echo “Nome do usuário: “
+	echo "Digite o nome do usuario iniciando com letra minúscula: "
 	read nome
 	adduser $nome
 	sleep 5
@@ -163,7 +157,7 @@ function addUsuario()
 
 function removerUsuario()
 {
-	echo “Nome do usuário: “
+	echo "Nome do usuário: "
 	read nome
 	userdel -r $nome
 	sleep 5
