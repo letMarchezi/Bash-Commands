@@ -9,14 +9,14 @@ function listarDiretorio(){
 	echo "Digite o nome do diretório: "
         read nome
         ls $nome
-        sleep 5
+        sleep 2
 } 
 
 function listarConteudoDir(){
 	echo "Digite o nome do diretório: "
         read nome
         ls -la $nome
-        sleep 5
+        sleep 2
 }
 
 function copiaArquivo()
@@ -26,7 +26,7 @@ function copiaArquivo()
 	echo "Caminho da cópia: "
 	read nome2
 	cp -R $nome1 $nome2
-        sleep 5
+        sleep 2
 }
 
 function copiaDir(){
@@ -35,7 +35,7 @@ function copiaDir(){
 	echo "Caminho da cópia: "
 	read nome2
 	cp -R $nome1 $nome2
-        sleep 5
+        sleep 2
 }
 
 function alterarArquivo()
@@ -45,7 +45,7 @@ function alterarArquivo()
 	echo "Caminho novo: "
 	read nome2
 	mv $nome1 $nome2
-        sleep 5
+        sleep 2
 }
 
 function alterarDir(){
@@ -54,35 +54,35 @@ function alterarDir(){
 	echo "Caminho novo: "
 	read nome2
 	mv $nome1 $nome2
-        sleep 5
+        sleep 2
 }
 
 function delArquivo(){
 	echo "Caminho do arquivo: "
         read nome
         rm $nome
-        sleep 5
+        sleep 2
 }
 
 function delDiretorio(){
 	echo "Caminho do diretório: "
 	read nome
 	rm -r $nome
-	sleep 5
+	sleep 2
 }
 
 function visualizarArquivo(){
 	echo "Caminho do arquivo: "
         read nome
         cat $nome
-        sleep 5
+        sleep 2
 }
 
 function visualizarArquivoPausa(){
         echo "Caminho do arquivo: "
         read nome
         cat $nome | more
-        sleep 5
+        sleep 2
 }
 
 
@@ -90,7 +90,7 @@ function exibirNumLinhas(){
         echo "Caminho do arquivo: "
         read nome
         wc -l $nome 
-        sleep 5
+        sleep 2
 }
 
 function procurarPalavra(){
@@ -99,7 +99,7 @@ function procurarPalavra(){
 	echo "Palavra para filtro: "
         read palavra
         cat $nome | grep -n $palavra
-        sleep 5
+        sleep 2
 }
 
 function exibiPrimeirasLinhas(){
@@ -108,7 +108,7 @@ function exibiPrimeirasLinhas(){
 	echo "Quantidade de linhas: "
         read linhas
         head -n $linhas $nome
-        sleep 5
+        sleep 2
 }
 
 function exibirUltimasLinhas()
@@ -118,25 +118,25 @@ function exibirUltimasLinhas()
 	echo "Quantidade de linhas: "
 	read linhas
 	tail -n $linhas $nome
-	sleep 5
+	sleep 2
 }
 
 function caminhoDir()
 {
 	pwd
-	sleep 5
+	sleep 2
 }
 
 function exibirUsuario()
 {
 	whoami
-	sleep 5
+	sleep 2
 }
 
 function exibirUsuariosSistema()
 {
 	w
-	sleep 5
+	sleep 2
 }
 
 function trocarSenha()
@@ -144,7 +144,7 @@ function trocarSenha()
 	echo "Digite o usuário que terá a senha alterada: "
 	read nome
 	passwd $nome
-	sleep 5
+	sleep 2
 }
 
 function addUsuario()
@@ -152,7 +152,7 @@ function addUsuario()
 	echo "Digite o nome do usuario iniciando com letra minúscula: "
 	read nome
 	adduser $nome
-	sleep 5
+	sleep 2
 }
 
 function removerUsuario()
@@ -160,7 +160,7 @@ function removerUsuario()
 	echo "Nome do usuário: "
 	read nome
 	userdel -r $nome
-	sleep 5
+	sleep 2
 }
 
 
@@ -458,7 +458,7 @@ case "$y" in
 n)
 	echo "================================================"
 	echo "Saindo..."
-        sleep 3
+        sleep 2
         clear;
         exit;
 
@@ -467,7 +467,7 @@ echo "================================================"
 ;;
 
 s)
-	sleep 3
+	sleep 2
 esac
 done	
 }
