@@ -18,7 +18,7 @@ def menu():
 def um():
 	os.system('sudo apt-get update')
 	os.system('sudo apt-get install')
-	print("Operação realizada com sucesso")
+	print("Operacao realizada com sucesso")
 	
 def dois():
 	fp = open('x', 'r')
@@ -28,7 +28,7 @@ def dois():
 	fp = open('x', 'w')
 	fp.write(string_nova)
 	fp.close()
-	print("Operação realizada com sucesso")
+	print("Operacao realizada com sucesso")
 
 def tres():
 	fp = open('x', 'r')
@@ -38,7 +38,7 @@ def tres():
 	fp = open('x', 'w')
 	fp.write(string_nova)
 	fp.close()
-	print("Operação realizada com sucesso")
+	print("Operacao realizada com sucesso")
 
 
 def quatro():
@@ -50,7 +50,7 @@ def quatro():
 	fp = open('x', 'w')
 	fp.write(string_nova)
 	fp.close()
-	print("Operação realizada com sucesso")
+	print("Operacao realizada com sucesso")
 
 def cinco():
 	fp = open('x', 'r')
@@ -60,11 +60,11 @@ def cinco():
 	fp = open('x', 'w')
 	fp.write(string_nova)
 	fp.close()
-	print("Operação realizada com sucesso")
+	print("Operacao realizada com sucesso")
 
 def seis():
 	os.system('sudo apt-get remove vsftpd')
-	print("Operação realizada com sucesso")
+	print("Operacao realizada com sucesso")
 
 def sete():
 	exit()
