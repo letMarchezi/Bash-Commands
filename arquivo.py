@@ -11,7 +11,7 @@ def menu():
     print ("| 3) Desabilitar acesso anonimo            |")
     print ("| 4) Habilitar envio/escrita de arquivo    |")
     print ("| 5) Desabilitar envio/escrita de arquivos |")
-    print ("| 6) Desinstalar o servidor FTP             |")
+    print ("| 6) Desinstalar o servidor FTP            |")
     print ("| 7) SAIR                                  |")
     print ("//----------------------------------------//")
 
