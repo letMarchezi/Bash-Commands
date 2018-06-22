@@ -91,6 +91,7 @@ while b != 1:
         sete()    
     else:
         print("opcao invalida")
+    os.system('pause 2')
     os.system('clear')
 print ("Encerrando...")
 
