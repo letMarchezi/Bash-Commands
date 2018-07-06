@@ -18,7 +18,7 @@ def menu():
 
 def um():
 	os.system('sudo apt-get update')
-	os.system('sudo apt-get install')
+	os.system('sudo apt-get install vsftpd')
 	print("Operacao realizada com sucesso!")
 	os.system('sleep 2')
 	
