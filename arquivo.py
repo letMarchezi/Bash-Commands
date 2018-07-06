@@ -5,6 +5,7 @@
 import os
 os.system('clear')
 
+
 def menu():
     print ("//----------------------------------------//")
     print ("| 1) Instalar servidor FTP                 |")  
@@ -20,7 +21,7 @@ def um():
 	os.system('sudo apt-get update')
 	os.system('sudo apt-get install vsftpd')
 	print("Operacao realizada com sucesso!")
-	os.system('sleep 2')
+	os.system('sleep 1')
 	
 def dois():
 	fp = open('/etc/vsftpd.conf', 'r')
@@ -32,7 +33,7 @@ def dois():
 	fp.close()
 	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
-	os.system('sleep 2')
+	os.system('sleep 1')
 
 def tres():
 	fp = open('/etc/vsftpd.conf', 'r')
@@ -44,7 +45,7 @@ def tres():
 	fp.close()
 	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
-	os.system('sleep 2')
+	os.system('sleep 1')
 
 
 def quatro():
@@ -58,7 +59,7 @@ def quatro():
 	fp.close()
 	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
-	os.system('sleep 2')
+	os.system('sleep 1')
 
 def cinco():
 	fp = open('/etc/vsftpd.conf', 'r')
@@ -70,21 +71,24 @@ def cinco():
 	fp.close()
 	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
-	os.system('sleep 2')
+	os.system('sleep 1')
 
 def seis():
 	os.system('sudo apt-get purge vsftpd')
 	print("Operacao realizada com sucesso!")
 	os.system('service vsftpd restart')
-	os.system('sleep 2')
+	os.system('sleep 1')
 
 def sete():
 	print ("Encerrando...")
-	os.system('sleep 2')
+	os.system('sleep 1')
 	os.system('clear')
 	exit()
 
 b = 0
+
+print('Digite sua senha para autenticar:')
+os.system('sudo chmod 777 /etc/vsftpd.conf')
 
 while b != 1:
     menu()
@@ -106,7 +110,7 @@ while b != 1:
         sete()    
     else:
         print("Opcao invalida")
-    os.system('sleep 2')
+    os.system('sleep 1')
     os.system('clear')
 
 
