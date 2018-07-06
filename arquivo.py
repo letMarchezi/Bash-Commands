@@ -30,6 +30,7 @@ def dois():
 	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
+	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
 	os.system('sleep 2')
 
@@ -41,6 +42,7 @@ def tres():
 	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
+	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
 	os.system('sleep 2')
 
@@ -54,6 +56,7 @@ def quatro():
 	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
+	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
 	os.system('sleep 2')
 
@@ -65,12 +68,14 @@ def cinco():
 	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
+	os.system('service vsftpd restart')
 	print("Operacao realizada com sucesso!")
 	os.system('sleep 2')
 
 def seis():
 	os.system('sudo apt-get purge vsftpd')
 	print("Operacao realizada com sucesso!")
+	os.system('service vsftpd restart')
 	os.system('sleep 2')
 
 def sete():
