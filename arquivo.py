@@ -69,7 +69,7 @@ def cinco():
 	os.system('sleep 2')
 
 def seis():
-	os.system('sudo apt-get remove vsftpd')
+	os.system('sudo apt-get purge vsftpd')
 	print("Operacao realizada com sucesso!")
 	os.system('sleep 2')
 
