@@ -20,54 +20,63 @@ def um():
 	os.system('sudo apt-get update')
 	os.system('sudo apt-get install')
 	print("Operacao realizada com sucesso!")
+	os.system('sleep 2')
 	
 def dois():
 	fp = open('/etc/vsftpd.conf', 'r')
 	conteudo = fp.read()
 	fp.close()
 	string_nova = conteudo.replace('anonymous_enable=NO', 'anonymous_enable=YES')
-	fp = open('etc/vsftpd.conf', 'w')
+	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
 	print("Operacao realizada com sucesso!")
+	os.system('sleep 2')
 
 def tres():
-	fp = open('etc/vsftpd.conf', 'r')
+	fp = open('/etc/vsftpd.conf', 'r')
 	conteudo = fp.read()
 	fp.close()
 	string_nova = conteudo.replace('anonymous_enable=YES', 'anonymous_enable=NO')
-	fp = open('etc/vsftpd.conf', 'w')
+	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
 	print("Operacao realizada com sucesso!")
+	os.system('sleep 2')
 
 
 def quatro():
 
-	fp = open('etc/vsftpd.conf', 'r')
+	fp = open('/etc/vsftpd.conf', 'r')
 	conteudo = fp.read()
 	fp.close()
 	string_nova = conteudo.replace('#write_enable=YES', 'write_enable=YES')
-	fp = open('etc/vsftpd.conf', 'w')
+	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
 	print("Operacao realizada com sucesso!")
+	os.system('sleep 2')
 
 def cinco():
-	fp = open('etc/vsftpd.conf', 'r')
+	fp = open('/etc/vsftpd.conf', 'r')
 	conteudo = fp.read()
 	fp.close()
 	string_nova = conteudo.replace('write_enable=YES', '#write_enable=YES')
-	fp = open('etc/vsftpd.conf', 'w')
+	fp = open('/etc/vsftpd.conf', 'w')
 	fp.write(string_nova)
 	fp.close()
 	print("Operacao realizada com sucesso!")
+	os.system('sleep 2')
 
 def seis():
 	os.system('sudo apt-get remove vsftpd')
 	print("Operacao realizada com sucesso!")
+	os.system('sleep 2')
 
 def sete():
+	print ("Encerrando...")
+	os.system('sleep 2')
+	os.system('clear')
 	exit()
 
 b = 0
@@ -92,7 +101,7 @@ while b != 1:
         sete()    
     else:
         print("Opcao invalida")
-    os.system('pause 2')
+    os.system('sleep 2')
     os.system('clear')
-print ("Encerrando...")
+
 
